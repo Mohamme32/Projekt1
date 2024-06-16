@@ -964,7 +964,18 @@ var ajax_var = {"url":"https:\/\/جامع الرحمة\/wp-admin\/admin-ajax.php
 <script type="text/javascript" src="" id="bootstrap-js"></script>
 <script type="text/javascript" src="" id="fancybox-js"></script>
 <script type="text/javascript" src="" id="perfect-scrollbar-js"></script>
-<script type="text/javascript" src="https://assunnamoschee.de/wp-content/themes/alim/assets/js/themejs/owl.carousel.min.js?ver=1.0.0" id="owl-carousel-js"></script>
+<script type="text/javascript" src="https://cors-anywhere.herokuapp.com/https://assunnamoschee.de/wp-content/themes/alim/assets/js/themejs/owl.carousel.min.js?ver=1.0.0" id="owl-carousel-js"></script>
+<script>
+	fetch('https://cors-anywhere.herokuapp.com/https://assunnamoschee.de/wp-content/themes/alim/assets/js/themejs/owl.carousel.min.js?ver=1.0.0')
+	  .then(response => response.text())
+	  .then(scriptContent => {
+		const script = document.createElement('script');
+		script.text = scriptContent;
+		document.head.appendChild(script);
+	  })
+	  .catch(error => console.error('Error loading script:', error));
+	</script>
+	
 <script type="text/javascript" src="" id="alim-custom-scripts-js"></script>
 <script type="text/javascript" src="" id="elementor-webpack-runtime-js"></script>
 <script type="text/javascript" src="" id="elementor-frontend-modules-js"></script>
